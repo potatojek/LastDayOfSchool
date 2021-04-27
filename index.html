@@ -15,12 +15,14 @@
                 bottom: 0;
             }
         </style>
+        <title id="title">milliseconds till last day of school!</title>
     </head>
     <body>
         <script>
             const targetMillis = 1622151666000;
              setInterval(function(){
                 document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
+                document.getElementById("title").innerHTML = targetMillis - Date.now() + "milliseconds until the last day of school!"
              }, 1);
         </script>
         <h1 class="center">Milliseconds until the last day of school!</h1>
