@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .center {
+                text-align: center;
+            }
+            .millisDisplay {
+                font-size: 24px;
+                text-align: center;
+            }
+            .credit {
+                position: fixed;
+                font-size: 14px;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            const targetMillis = 1622151666000;
+             setInterval(function(){
+                document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
+             }, 1);
+        </script>
+        <h1 class="center">Milliseconds until the last day of school!</h1>
+        <p class="millisDisplay" id=milliseconds></p>
+        <p class="credit">Made by jek kelm</p>
+    </body>
+</html>
