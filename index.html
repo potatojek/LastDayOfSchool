@@ -19,10 +19,16 @@
     </head>
     <body>
         <script>
-            const targetMillis = 1653674400000;
+            var targetMillis = 1653674100000;
              setInterval(function(){
                 document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
                 document.getElementById("title").innerHTML = targetMillis - Date.now() + " milliseconds until school is out!"
+                if (targetMillis - Date.now() < 0) {
+                    document.getElementById("title").innerHTML = " 0 milliseconds until school is out!"
+                }
+                if (targetMillis - Date.now() < -2000) {
+                    document.getElementById("title").innerHTML = "BE FREE CHILDS"
+                }
              }, 1);
         </script>
         <h1 class="center">Milliseconds until school is out!</h1>
