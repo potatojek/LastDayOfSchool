@@ -22,12 +22,16 @@
             var targetMillis = 1653674100000;
              setInterval(function(){
                 document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
-                document.getElementById("title").innerHTML = targetMillis - Date.now() + " milliseconds until school is out!"
+                if (targetMillis - Date.now() > 0) {
+                    document.getElementById("title").innerHTML = targetMillis - Date.now() + " milliseconds until school is out!"
+                } else {
+                    document.getElementById("title").innerHTML = "SCHOOL IS OUT AGUHJDSBFJDSHGJKF"
+                } 
                 if (targetMillis - Date.now() < 0) {
-                    document.getElementById("title").innerHTML = " 0 milliseconds until school is out!"
+                    document.getElementById("milliseconds").innerHTML = " 0 milliseconds until school is out!"
                 }
                 if (targetMillis - Date.now() < -2000) {
-                    document.getElementById("title").innerHTML = "BE FREE CHILDS"
+                    document.getElementById("milliseconds").innerHTML = "BE FREE CHILDS"
                 }
              }, 1);
         </script>
