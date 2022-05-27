@@ -15,17 +15,17 @@
                 bottom: 0;
             }
         </style>
-        <title id="title">milliseconds till last day of school!</title>
+        <title id="title">Milliseconds until school is out!</title>
     </head>
     <body>
         <script>
-            const targetMillis = 1653643936000;
+            const targetMillis = 1653674400000;
              setInterval(function(){
                 document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
-                document.getElementById("title").innerHTML = targetMillis - Date.now() + " milliseconds until the last day of school!"
+                document.getElementById("title").innerHTML = targetMillis - Date.now() + " milliseconds until school is out!"
              }, 1);
         </script>
-        <h1 class="center">Milliseconds until the last day of school!</h1>
+        <h1 class="center">Milliseconds until school is out!</h1>
         <p class="millisDisplay" id=milliseconds></p>
         <p class="credit">Made by jek</p>
     </body>
