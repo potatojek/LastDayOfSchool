@@ -20,6 +20,11 @@
     <body>
         <script>
             var targetMillis = 1653674100000;
+            logJSONData();
+            async function logJSONData() {
+              const response = await fetch("http://example.com/movies.json");
+            }
+
              setInterval(function(){
                 document.getElementById("milliseconds").innerHTML = targetMillis - Date.now()
                 if (targetMillis - Date.now() > 0) {
